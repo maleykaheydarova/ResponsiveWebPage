@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLOGSITE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+        /* all */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+        }
+
+        body {
+            font-family: sans-serif;
+            font-size: 1rem;
+            background-color: black;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 0 auto;
+            width: 90%;
+
+        }
+
+
+        .container1 {
+            margin: 2rem 0 0 1rem;
+            width: 20rem;
+        }
+
+        .container2 {
+            margin: 2rem 0 2rem 1rem;
+            width: 70%;
+        }
+
+        .footer {
+            margin-top: 2rem;
+        }
+
+        /* header */
+
+        .info {
+            background-color: rgb(70, 68, 68);
+            height: 28rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+
+
+        }
+
+        .divforphoto {
+            width: 8rem;
+            height: 8rem;
+            background-color: rgb(148, 147, 147);
+            margin-top: 2rem;
+            border-radius: 6rem;
+
+        }
+
+        .text {
+
+            margin-bottom: 1rem;
+            padding: 1rem;
+
+        }
+
+        .text h1 a {
+            color: white;
+            font-size: 1.5rem;
+            text-decoration: none;
+            margin-bottom: 3rem;
+            margin-right: 1rem;
+
+
+
+        }
+
+        .text h1 a:hover {
+            cursor: pointer;
+        }
+
+        .headertext {
+            color: white;
+            font-size: 1rem;
+            margin: 0.3rem 0;
+
+        }
+
+        .socialmediaicons {
+
+            padding: 0.2rem;
+            margin-bottom: 2rem;
+
+        }
+
+        .socialmediaicons .icon {
+            margin: 0 0.3rem;
+            color: white;
+        }
+
+        .socialmediaicons button {
+            padding: 0.4rem;
+            border-radius: 4rem;
+            border: none;
+            background-color: rgb(51, 50, 50);
+        }
+
+        .socialmediaicons button:hover {
+            background-color: white;
+            cursor: pointer;
+            color: black;
+        }
+
+        .infobuttons {
+
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .infobuttons button {
+            width: 10rem;
+            height: 3rem;
+            border-right: none;
+            border-bottom: none;
+            border-color: black;
+            background-color: rgb(70, 68, 68);
+        }
+
+        .infobuttons button i {
+            color: white;
+        }
+
+        .infobuttons button:hover {
+            cursor: pointer;
+        }
+
+        /* search */
+
+
+        .search {
+            margin-top: 2rem;
+            height: 3.2rem;
+
+        }
+
+        .search form {
+            background-color: white;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: flex-end;
+
+
+        }
+
+        .search form input {
+            width: 100%;
+            height: 100%;
+            background-color: rgb(70, 68, 68);
+            outline: none;
+            border: none;
+
+        }
+        .search form input[ type="search"]{
+            color: lightgray;
+            font-size: 1rem;
+            
+        }
+        
+        .search form input[ type="search"]::-webkit-search-cancel-button {
+            display: none;
+        }
+         
+        .search form button {
+            width: 6rem;
+            border: none;
+            background-color: rgb(70, 68, 68);
+            outline: none;
+        }
+
+        .search form button i {
+            color: rgb(32, 32, 32);
+        }
+
+        .search form button i:hover {
+            color: white;
+
+        }
+
+        .search form button:hover {
+            background-color: rgb(92, 89, 89);
+        }
+
+        ::placeholder {
+            color: lightgray;
+            font-size: 1rem;
+
+        }
+
+        /* pages */
+
+
+
+        .pages {
+            background-color: rgb(70, 68, 68);
+            margin-top: 2rem;
+            height: 12rem;
+        }
+
+        .articlename {
+            margin-top: 2rem;
+            height: 3.8rem;
+            padding: 1.2rem;
+
+        }
+
+        .articlename h3 {
+            color: white;
+            font-weight: 50;
+        }
+
+        hr {
+            opacity: 0.1;
+            color: black;
+        }
+
+        .pages p {
+            margin-top: 1rem;
+            margin-left: 1rem;
+
+        }
+
+        .pages p a {
+            color: lightgray;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        .pages p a:hover {
+            color: white;
+            cursor: pointer;
+        }
+
+        /* tags */
+
+
+        .tags {
+            background-color: rgb(70, 68, 68);
+            margin-top: 2rem;
+            height: 24rem;
+
+        }
+
+        .tag {
+            padding: 0.2rem;
+            margin: 0.8rem 0 0 1rem;
+            background-color: rgb(92, 89, 89);
+            color: white;
+            border: none;
+            font-size: 1rem;
+        }
+
+        .tag:hover {
+            color: black;
+            background-color: white;
+            cursor: pointer;
+        }
+
+        /* categories */
+
+        .categories {
+            background-color: rgb(70, 68, 68);
+            margin-top: 2rem;
+            height: 33rem;
+        }
+
+        .categories p {
+            padding: 0.1rem;
+            margin: 0.5rem 0 0 1rem;
+            font-size: 1rem;
+        }
+
+        .categories p a {
+            text-decoration: none;
+            color: rgb(148, 147, 147);
+
+        }
+
+        .categories p a i {
+            color: orange;
+            transform: rotate(45deg);
+            margin-right: 0.2rem;
+        }
+
+        .categories p a:hover {
+            color: white;
+        }
+
+        /* footer */
+
+        .footer {
+            font-size: 0.8rem;
+        }
+
+        .footer p {
+            color: rgb(148, 147, 147);
+        }
+
+        .footer p a {
+            color: rgb(148, 147, 147);
+            text-decoration: none;
+        }
+
+        /* section */
+
+        section .paragraph {
+            margin-bottom: 2rem;
+            padding: 4rem;
+            background-color: white;
+        }
+
+        section .paragraph a h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: blue;
+
+        }
+
+        section .paragraph a h2:hover {
+            color: black;
+        }
+
+        section .paragraph a {
+            text-decoration: none;
+        }
+
+        section .paragraph p {
+            color: gray;
+            font-size: 1rem;
+        }
+
+        section .paragraph p a {
+            color: gray;
+            font-size: 1rem;
+        }
+
+        section .paragraph .inf {
+            margin-top: 1rem;
+            color: rgb(68, 65, 65);
+            font-size: 1.1rem;
+            font-size: 10;
+        }
+
+        section .paragraph p .more {
+            color: blue;
+            font-size: 1.1rem;
+            text-decoration: none;
+        }
+
+        /* footer2 */
+
+        .footer2 {
+            display: flex;
+            flex-direction: column;
+        }
+
+
+
+        .nextpages {
+            margin-bottom: 0.5rem;
+        }
+
+        .nextpages button {
+            padding: 0.4rem;
+            margin-right: 0.3rem;
+            margin-left: 0.3rem;
+            background-color: rgb(59, 58, 58);
+            color: white;
+            cursor: pointer;
+            border: none;
+        }
+
+        .nextpages .btn {
+            padding: 0.4rem;
+            color: rgb(153, 150, 150);
+            background-color: rgb(59, 58, 58);
+            border: none;
+            cursor: auto;
+            margin-bottom: 0.3rem;
+
+        }
+
+        .previouspages button {
+            padding: 0.4rem;
+            color: white;
+            background-color: rgb(59, 58, 58);
+            border: none;
+            cursor: pointer;
+            margin-bottom: 0.3rem;
+        }
+
+
+
+
+
+
+        /* tablet and mobile */
+
+        @media(max-width:768px) {
+            .headertext {
+                display: none;
+            }
+
+            .search {
+                display: none;
+            }
+
+            .pages {
+                display: none;
+            }
+
+            .tags {
+                display: none;
+            }
+
+            .categories {
+                display: none;
+            }
+
+            .footer {
+                display: none;
+            }
+
+            .container {
+                display: flex;
+                flex-direction: column;
+                margin: 0 auto;
+            }
+
+            .container1 {
+                width: 100%;
+                margin: 0 auto;
+            }
+
+            .container2 {
+                width: 100%;
+                margin: 0 auto;
+            }
+
+            .infobuttons button {
+                width: 100%;
+            }
+
+            section .paragraph a h2 {
+                font-size: 1.5rem;
+            }
+
+            .footer2 {
+                width: 100%;
+                margin-top: 2rem;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                margin: 0 auto;
+            }
+
+
+            .footer2 button {
+                margin: 0.3rem;
+            }
+
+            .footer .btn {
+                margin: 0.3rem;
+            }
+
+
+        }
+
+        @media(max-width:425px) {
+
+
+            .divforphoto {
+                width: 8rem;
+                height: 8rem;
+                background-color: rgb(148, 147, 147);
+                margin-top: 2rem;
+                border-radius: 15rem;
+
+            }
+
+            .search {
+                display: none;
+            }
+
+            .pages {
+                display: none;
+            }
+
+            .tags {
+                display: none;
+            }
+
+            .categories {
+                display: none;
+            }
+
+            .footer {
+                display: none;
+            }
+
+            .container {
+                display: flex;
+                flex-direction: column;
+                margin: 0 auto;
+
+            }
+
+            .container1 {
+                width: 100%;
+                margin: 0 auto;
+            }
+
+            .container2 {
+                width: 100%;
+                margin: 0 auto;
+            }
+
+            .infobuttons button {
+                width: 100%;
+            }
+
+            section .paragraph a h2 {
+                font-size: 1.2rem;
+            }
+
+            .footer2 {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                flex-wrap: wrap;
+                margin: 0 auto;
+                gap: 1rem;
+            }
+
+            .footer2 button {
+                margin: 0.3rem;
+
+            }
+
+            .footer .btn {
+                margin: 0.3rem;
+
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- 1st -->
+    <div class="container">
+        <div class="container1">
+            <header>
+                <div class="info">
+                    <div class="divforphoto">
+
+                    </div>
+                    <div class="text">
+                        <h1><a href="">Burak Selim Şenyurt</a></h1>
+                        <p class="headertext">Matematik Mühendisi Bir</p>
+                        <p class="headertext">Bilgisayar Programcısının</p>
+                        <p class="headertext">Notları</p>
+                    </div>
+                    <div class="socialmediaicons">
+                        <button class="icon"><i class="fa-brands fa-linkedin-in"></i></button>
+                        <button class="icon"><i class="fa-brands fa-youtube"></i></button>
+                        <button class="icon"><i class="fa-brands fa-git"></i></button>
+                    </div>
+                    <div class="infobuttons">
+                        <button title="ANASAYFA"><i class="fa-solid fa-house"></i></button>
+                        <button title="ARŞİV"><i class="fa-solid fa-align-left"></i></button>
+                        <button title="OTURUM AÇ"><i class="fa-solid fa-right-to-bracket"></i></button>
+                    </div>
+
+
+                </div>
+
+                <div class="search">
+                    <form>
+                        <input type="search" placeholder="   Arama...">
+                        <button><i class="fa fa-magnifying-glass"></i></button>
+                    </form>
+
+                </div>
+                <div class="pages">
+                    <div class="articlename">
+                        <h3>SAYFALARIM</h3>
+                    </div>
+
+                    <hr>
+
+                    <p class="page"><a href="">Almanac</a></p>
+                    <p class="page"><a href="">Ben Kimim?</a></p>
+                    <p class="page"><a href="">Java ile 24 Kahve Molası Dökümanı</a></p>
+                </div>
+                <div class="tags">
+                    <div class="articlename">
+                        <h3>TAG BULUTU</h3>
+                    </div>
+                    <hr>
+                    <button class="tag">.net</button>
+                    <button class="tag">.net core</button>
+                    <button class="tag">.net core 2.0</button>
+                    <button class="tag">.net framework</button>
+                    <button class="tag">.net framework 4.0</button>
+                    <button class="tag">.net remoting</button>
+                    <button class="tag">.net ria services</button>
+                    <button class="tag">ado.net</button>
+                    <button class="tag">ado.net 2.0</button>
+                    <button class="tag">ado.net data services</button>
+                    <button class="tag">ado.net entity framework</button>
+                    <button class="tag">ado.net entity framework 4.0</button>
+                    <button class="tag">algorithms</button>
+                    <button class="tag">api</button>
+                    <button class="tag">asp.net</button>
+
+                </div>
+                <div class="categories">
+                    <div class="articlename">
+                        <h3>KATEGORILER</h3>
+                    </div>
+                    <hr>
+                    <p><a href=""><i class="fa fa-solid fa-wifi"></i>.Net Core (48)</a></p>
+                    <p><a href=""><i class="fa fa-solid fa-wifi"></i>.Net Framework 4.0 (15)</a></p>
+                    <p><a href=""><i class="fa fa-solid fa-wifi"></i>.Net Framework 4.5 (7)</a></p>
+                    <p><a href=""><i class="fa fa-solid fa-wifi"></i>.Net Remoting (11)</a></p>
+                    <p><a href=""><i class="fa fa-solid fa-wifi"></i>.Net RIA Services (5)</a></p>
+                    <p><a href=""><i class="fa fa-solid fa-wifi"></i>.Net Temelleri (4)</a></p>
+                    <p><a href=""><i class="fa fa-solid fa-wifi"></i>Ado.Net (47)</a></p>
+                    <p><a href=""><i class="fa fa-solid fa-wifi"></i>Ado.net 2.0 (12)</a></p>
+                    <p><a href=""><i class="fa fa-solid fa-wifi"></i>Ado.Net Data Services (11)</a></p>
+                    <p><a href=""><i class="fa fa-solid fa-wifi"></i>Ado.Net Sync Services (1)</a></p>
+                    <p><a href=""><i class="fa fa-solid fa-wifi"></i>Algoritma (6)</a></p>
+                    <p><a href=""><i class="fa fa-solid fa-wifi"></i>Angular (5)</a></p>
+                    <p><a href=""><i class="fa fa-solid fa-wifi"></i>Anti Patterns (2)</a></p>
+                    <p><a href=""><i class="fa fa-solid fa-wifi"></i>Asp.Net (18)</a></p>
+                    <p><a href=""><i class="fa fa-solid fa-wifi"></i>Asp.Net 2.0 (26)</a></p>
+
+
+                </div>
+
+
+            </header>
+            <footer class="footer">
+                <p>Copyright © 2023</p>
+                <p><a href="">Powered by BlogEngine.NET</a></p>
+                <p><a href="">Designed by Francis Bio</a></p>
+            </footer>
+        </div>
+        <!-- 2nd -->
+        <div class="container2">
+            <section>
+                <div class="paragraph">
+                    <a href="">
+                        <h2>Matematik ve Oyun Programlama - Missile Command - Final</h2>
+                    </a>
+                    <p>29 KASIM 2022a <a href="">BURAK-SELIM-SENYURT RUST</a></p>
+                    <p class="inf">Hiçbir ödül veya karşılık beklemeden kendinizi iyi hissetmek adına en son ne
+                        yaptığınızı
+                        hatırlıyor
+                        musunuz? Bu öyle değişik bir iç motivasyon ki kendinizi bir amaca adayarak hareket etmenizi
+                        sağlıyor. Karşılaşılan engeller engel olmaktan çıkıyor ve anlamak istediğiniz şeyler haline
+                        geliyor.
+                        En azından ben birkaç haftadır böyle hissediyorum. Cevval bir oyun programcısı olmak ya da
+                        akademide
+                        bu alana dair dersler vermek gibi bir amacım yok ama çok güçlü bir iç motivasyonum var;
+                        öğrenmek…
+                        <a class="more" href=""> [Daha fazla]</a>
+                    </p>
+                </div>
+                <div class="paragraph">
+                    <a href="">
+                        <h2>Matematik ve Oyun Programlama - Missile Command - Bölüm 2</h2>
+                    </a>
+                    <p>25 KASIM 2022 <a href="">BURAK-SELIM-SENYURT RUST</a></p>
+                    <p class="inf">Bir önceki programımızda Atari'nin efsane oyunlardan Missile Command'in arkasındaki
+                        matematik
+                        enstrümanları incelemeye başlamıştık. İkinci bölümde ise zeminin orta noktasına ve şehrin biraz
+                        yukarsına füze bataryamızı yerleştiriyoruz. Bu füze bataryası, oyuncu mouse imlecini ekranda
+                        hareket
+                        ettirdikçe oraya doğru dönecek bir çizgiden ibaret esasında. Oyuncu mouse imlecinin olduğu yerde
+                        sol
+                        tuşa tıklarsa da bataryanın namlu ucundan bu noktaya doğru sevimli ve mavi renkte minik bir
+                        dörtgen
+                        fırlıyor. Herhangi bir zamanda sahnede sadece üç tane mermi oluyor. Hatta füze bataryası 30
+                        derecenin altına veya 150 derecenin üstüne hareket edemediği gibi ateş de edemiyor. Diğer yandan
+                        mermi, mouse ile tıklanan ilk noktaya vardığında sahneden kaldırılıyor. Mermiler belli bir hızda
+                        ama
+                        şehre inen füzelerden azıcık daha hızlı şekilde hareket ediyorlar.
+                        <a class="more" href=""> [Daha fazla]</a>
+                    </p>
+
+                </div>
+                <div class="paragraph">
+                    <a href="">
+                        <h2>Matematik ve Oyun Programlama - Missile Command - Bölüm 1</h2>
+                    </a>
+                    <p>18 KASIM 2022 <a href="">BURAK-SELIM-SENYURT RUST</a></p>
+                    <p class="inf">Uzun bir süredir Rust programlama dili ile hobi amaçlı uğraşıyorum. Son birkaç
+                        aydırda Rust
+                        tarafında
+                        kullanılan oyun motorlarını kurcalamaktayım. Ancak birkaç haftadır amacım oyun programlamada
+                        kullanılan temel matematik enstrümanları öğrenmek. Bana göre bu alanda ilerleyebilmemin en iyi
+                        yolu
+                        bilinen oyunların birer klonunu yazmaya çalışmak. Onca vektör, açı, nokta çarpım problemini
+                        işledikten sonra ilk gözüme kestirdiğim zamanın efsane Atari oyunlarından olan Missile Command.
+                        Kaynaklara göre seksenli yılların en kült oyunlarından birisi olarak karşımıza çıkıyor. Oyunda
+                        ekranın üst kısmında rastgele açılarda ve sayıda füzenin üssümüze inişine şahit oluyoruz. Oyuncu
+                        üssün tam orta yerinde duran füze rampasında ateş ederek şehre inen füzeleri patlatmaya
+                        çalışıyor.
+                        Görüntü tamamen piksel hareketlerinden oluşmakta ve benim asıl ilgilendiğim oyunun arkasındaki
+                        olası
+                        matematik hesaplamalar.
+                        <a class="more" href=""> [Daha fazla]</a>
+                    </p>
+                </div>
+                <div class="paragraph">
+                    <a href="">
+                        <h2>Oyun Geliştirmede Kullanılan Temel Matematik Enstrümanlar</h2>
+                    </a>
+                    <p>14 EKIM 2022 <a href="">BURAK-SELIM-SENYURT RUST</a></p>
+                    <p class="inf">Oyun sahasına ekranın sağından gelip düz ve çapraz bir çizgide ilerledikten sonra
+                        dairesel
+                        hareketle
+                        devam edip rastgele zamanlarda ateş eden uzay gemisinin kodlamasını öğrenirken ortaya döküken
+                        kosinüs ve sinüs çağrıları sonrası ise şöyle bir durup düşünmeye başladım. Öncesinde kağıt kalem
+                        alıp biraz karalama yapmalıydım. Bugünün popüler oyun motorlarından Unity, Unreal Engine
+                        gibilerinin
+                        çoğu fizik motorlarından ışıklandırmaya, gölgeleme efektlerinden çarpışma hesaplamalarına,
+                        izdüşümsel kamera bazlı 2D sahalardan sıçrama efektlerine kadar pek çok şeyin temel
+                        hesaplamasını
+                        hazır olarak sunmakta. Hatta IDE desteği sunanlar çok daha öne çıkmakta. Ancak oyun
+                        programlamanın
+                        temellerinde her zaman olduğu gibi matematik var ve bu atlanmaması gereken bir mevzu...
+                        <a class="more" href=""> [Daha fazla]</a>
+                    </p>
+
+                </div>
+                <div class="paragraph">
+                    <a href="">
+                        <h2>Rust Pratikleri - Value Moved Here</h2>
+                    </a>
+                    <p>22 MAYIS 2022 <a href="">BURAK-SELIM-SENYURT RUST</a></p>
+                    <p class="inf">Sıklıkla vurguladığım üzere Rust programlama dili bellek yönetimi ve güvenliği
+                        konusunda son
+                        derece
+                        hassas kurallar içeriyor. Değişken sahipliği kuralları ve ödünç alma kontrolcüleri(Ownership,
+                        borrow
+                        checker) olası bir çok bellek probleminin henüz derleme aşamasındayken önüne geçilmesini
+                        sağlıyor
+                        ancak dilin öğrenme eğrisini de oldukça dikleştiriyor(En azından ilk zamanlarda) Esasında C,C++
+                        türevi sayabileceğimiz Rust bir Garbage Collector mekanizması kullanmaması belleğin iç
+                        dinamiklerini
+                        daha iyi bilmemizi de gerektiriyor. Stack ve heap özelinde değişkenlerin nasıl tutulduğu, yer
+                        ayarlamalarının nasıl yapıldığını bilmek programcı açısından oldukça önemli. Bu sayede pek çok
+                        derleme zamanı hatasını anlamlandırmak kolaylaşıyor. Bu yazıdaki amacımız Rust öğrenenlerin
+                        sıklıkla
+                        yakalandığı "Value borrowed here after move" hatasını bellek çalışma prensipleri kapsamında
+                        özetlemek.
+                        <a class="more" href=""> [Daha fazla]</a>
+                    </p>
+
+                </div>
+                <div class="paragraph">
+                    <a href="">
+                        <h2>Rust Pratikleri - State Tasarım Kalıbı</h2>
+                    </a>
+                    <p>15 MAYIS 2022 <a href="">BURAK-SELIM-SENYURT RUST</a></p>
+                    <p class="inf">Belli bir akış içerisinde ele alınan nesneler belli durumlara sahiptirler. Bu
+                        durumlar arasındaki
+                        geçişler için fonksiyonlardan yararlanılırken bazı kuralların işletilmesi de istenebilir.
+                        Örneğin
+                        belli bir duruma sahipken diğer bir duruma geçilmesini engelleyen karar mekanizmaları ve
+                        koşullar
+                        söz konusudur. Hatta programın belli bir t anında içinde bulunabileceği durumlar bellidir. Nesne
+                        yönelimli dillerde bu gibi ihtiyaçlar için davranışsal(Behavioral) kalıplardan olan State
+                        tasarım
+                        deseni sıklıkla kullanılır. Hatta oyun programlamada State Machine türevli motorlarda nesne
+                        durumlarının yönetimi için bu desene ait pratikler söz konusudur.
+                        <a class="more" href=""> [Daha fazla]</a>
+                    </p>
+                </div>
+                <div class="paragraph">
+                    <a href="">
+                        <h2>Rust ile Oyun Programlama</h2>
+                    </a>
+                    <p>08 MAYIS 2022 <a href="">BURAK-SELIM-SENYURT RUST</a></p>
+                    <p class="inf">Uzun süredir Rust programlama dilini öğrenmeye çalışıyorum. Bu yolda yürürken
+                        çevrimiçi eğitim
+                        materyalleri, blog yazıları ve bültenler haricinde birincil kaynak olarak da kitapları
+                        kullanmayı
+                        tercih ediyorum. Diğer yandan bir programlama dilini iyi seviyede öğrenmenin bana göre iki yolu
+                        var;
+                        var olan ürünlerin benzerini yazmak ya da oyun geliştirmeye çalışmak. Bazı yayınlar programlama
+                        dilini oyun yazarak öğretmeye çalışıyorlar. Takip ettiğim Herbert Wolverson'un Hands-on Rust:
+                        Effective Learning through 2D Game Development and Play isimli kitap da bunlardan birisi. Çok
+                        efsane
+                        bir öğrenim deneyimi olduğunu ifade edebilirim.
+                        <a class="more" href=""> [Daha fazla]</a>
+                    </p>
+                </div>
+                <div class="paragraph">
+                    <a href="">
+                        <h2>Rust Pratikleri - Trait Objects</h2>
+                    </a>
+                    <p>01 MAYIS 2022 <a href="">BURAK-SELIM-SENYURT RUST</a></p>
+                    <p class="inf">Bir Windows Forms uygulaması düşünelim ya da bir web sayfası. Hatta birden fazla
+                        bileşenden
+                        (component) oluşan bir mobil uygulama arayüzünü...Temelde ana kontrol üstüne eklenen başka tekil
+                        ve
+                        karma kontrollerden oluşan bir bütün söz konusudur. Şimdi de ana saha üzerine gelen bu
+                        kontrollerin
+                        nasıl çizilebildiğini düşünelim. Bir motor büyük ihtimalle belli ortak davranışlara sahip olan
+                        bileşenleri, ortamın istediği kıvamda (örneğin HTML olarak) çizme görevini üstlenir. Hatta bu
+                        sistemlerde bileşen ağacı öyle bir tasarlanır ki, geliştiriciler isterlerse kendi bileşenleri de
+                        tasarlayıp çalışma zamanı motorunun kullanımına sunabilir.
+                        <a class="more" href=""> [Daha fazla]</a>
+                    </p>
+                </div>
+                <div class="paragraph">
+                    <a href="">
+                        <h2>Rust Pratikleri - OOP</h2>
+                    </a>
+                    <p>24 NISAN 2022 <a href="">BURAK-SELIM-SENYURT RUST</a></p>
+                    <p class="inf">Yılların .Net geliştiricisi olunca insan, ister istemez Rust, Go gibi dillerde nesne
+                        yönelimli
+                        dünyanın karşılıklarını arıyor. Encapsulation, Inheritance, Polymorphsym gibi. Bu konuda
+                        araştırmalar yaparken birkaç şey öğrendi tabii ve C# ile yazdığım bazı şeyleri Rust tarafında
+                        karşılamak istedim. Sonuçta ortaya şu an okumakta olduğunuz pratik çıktı. Ben daha çok kalıtım
+                        ve
+                        çok biçimli nesne davranışı konularına eğilmeye çalıştım. Dilerseniz hiç vakit kaybetmeden
+                        örneklerimize geçelim.
+                        <a class="more" href=""> [Daha fazla]</a>
+                    </p>
+                </div>
+                <div class="paragraph">
+                    <a href="">
+                        <h2>Rust Pratikleri - Değişkenleri Kopyalayarak veya Referans Olarak Taşımak</h2>
+                    </a>
+                    <p>17 NISAN 2022 <a href="">BURAK-SELIM-SENYURT RUST</a></p>
+                    <p class="inf">Bu pratikte içinde başka bir enum sabiti kullanan bir enum sabitinin bir fonksiyonda
+                        parametre
+                        olarak
+                        kullanılmasında oluşabilecek Value Moved Here sorununa bakıyoruz. Cümle biraz karışık oldu :D
+                        Öyleyse örnek üstünden ilerleyelim. Kod tarafında ilk olarak sorunsuz bir ortam tesis edeceğiz.
+                        Problemi oluşturacağız. Ardından iki farklı yolla duruma açıklık getireceğiz.
+                        <a class="more" href=""> [Daha fazla]</a>
+                    </p>
+                </div>
+                <div class="paragraph">
+                    <a href="">
+                        <h2>Rust Pratikleri - Wordle Oyunu</h2>
+                    </a>
+                    <p>10 NISAN 2022 <a href="">BURAK-SELIM-SENYURT RUST</a></p>
+                    <p class="inf">Doğruyu söylemek gerekirse mobil oyunlarla çok fazla aram yok. Yine de etkileyici
+                        grafikleri
+                        olmasa
+                        da insanları saatlerce esir edebilenlerin nasıl yazıldığını merak etmiyor da değilim. Geçtiğimiz
+                        günlerde The Pragmatic Programmers mecrasından Herbert Wolverson'un Wordle isimli popüler bir
+                        oyunun
+                        Rust ile nasıl yazılacağını anlattığı şu yazısına denk geldim. E boş durur muyum? Adım adım
+                        tatbik
+                        etmeye karar verdim. Nitekim bu yolculuk Rust ile ilgili birçok şey öğretecekti bana. Her şeyden
+                        önce pratik yapacaktım. İşte bu yazıda izlediğim adımları ve kendi yorumlarımı bulabilirsiniz.
+                        <a class="more" href=""> [Daha fazla]</a>
+                    </p>
+                </div>
+                <div class="paragraph">
+                    <a href="">
+                        <h2>Rust Pratikleri - Aynı Anda Sadece Tek Bir Değiştirilebilir Referans Olabilir</h2>
+                    </a>
+                    <p>03 NISAN 2022 <a href="">BURAK-SELIM-SENYURT RUST</a></p>
+                    <p class="inf">Thread'ler ve eş zamanlı iş parçacıkları işin içerisine girdiğinde karşımıza çıkan
+                        önemli
+                        konulardan
+                        biriside mutable türden referansları nasıl kullanacağımızdır. Malum bu thread'ler aynı veri
+                        üzerinde
+                        değişiklik yapmak isteyebilirler. Data Races oluşmaması Rust'ın temel ilkelerinden birisidir ve
+                        bunun en büyük sebebi bellek ortamını güvenli halde koruyabilmektir. Dolayısıyla belleğin
+                        referans
+                        edilen bölgelerinin bu thread'ler içerisinde yazma amaçlı ele alınması durumlarında kod biraz
+                        karmaşıklaşabilir. Öncesinde kuralın ne olduğunu dile getirelim; Rust bir t anında birden fazla
+                        mutable referans oluşturulmasına izin vermez, buna müsaade edecek şekilde kodlama yapmamızı
+                        engeller. Elbette konuyu anlamanın en güzel yolu basit bir örnek üzerinden ilerlemekle mümkün.
+                        Öyleyse başlayalım.
+                        <a class="more" href=""> [Daha fazla]</a>
+                    </p>
+                </div>
+                <div class="paragraph">
+                    <a href="">
+                        <h2>Rust Programlama Dili için "Hello World"</h2>
+                    </a>
+                    <p>27 MART 2022 <a href="">BURAK-SELIM-SENYURT RUST</a></p>
+                    <p class="inf">Yakın zamanda yazılımcılardan oluşan bir ekibe Rust programlama dili ile ilgili
+                        bildiklerimi
+                        anlattım. Bunu yaparken örnek bir program kodu üzerinden ilerledim. İlk etapta neyi nasıl
+                        anlatacağım konusunda hiçbir fikrim yoktu. Sonrasında doğaçlama ilerlemeye ve yolda karşımıza
+                        çıkacak sorunlar üzerinden dili tanıtmaya karar verdim. Derken anlattıklarımı bir video haline
+                        getirsem iyi olabilir diye düşündüm. Pek tabii Rust dilini yeni öğrenen birisi olarak bunu 1
+                        saatlik
+                        bir zaman diliminde yapmak pek mümkün değil. Yine de ilerisi için iyi bir hazırlık oldu. Belki
+                        ilgi
+                        duyan arkadaşlar için yol gösterici de olur. Deneysel amaçla gerçekleştirdiğim bu görsel derste
+                        aşağıdaki konulara değindim.
+                        <a class="more" href=""> [Daha fazla]</a>
+                    </p>
+                </div>
+                <div class="paragraph">
+                    <a href="">
+                        <h2>Rust Pratikleri - HTTP Sunucusu Yazmak/Yazmaya Çalışmak</h2>
+                    </a>
+                    <p>20 MART 2022<a href="">BURAK-SELIM-SENYURT RUST</a></p>
+                    <p class="inf">Bir HTTP sunucusu yazmaya ne gerek var diyebilirsiniz. Öyle düşünmeyin. Bir
+                        programlama dilini
+                        öğrenmenin en iyi yolu, var olan yapıları o dille yazmaya çalışmaktır. Hangi dil ya da platform
+                        olursa olsun ortada dolaşan yüzlerce HTTP server zaten var. Ancak nasıl çalıştıklarını anlamak
+                        için
+                        de yine yeniden yazmakta yarar var. Bugünkü pratiğimizde Rust dilini kullanarak bir HTTP server
+                        nasıl yazılabilir incelemeye çalışacağız. Esasında sadece minik bir başlanıç yapacağız. Nitekim
+                        bir
+                        HTTP sunucusunun görevleri çok geniş olabilir. Sonuçta IIS Server yazmayacağız ancak genel
+                        felsefeyi
+                        öğreneceğiz.
+                        <a class="more" href=""> [Daha fazla]</a>
+                    </p>
+                </div>
+                <div class="paragraph">
+                    <a href="">
+                        <h2>Rust Pratikleri - Serde, Json ve Biraz Eğlence</h2>
+                    </a>
+                    <p>13 MART 2022 <a href="">BURAK-SELIM-SENYURT RUST</a></p>
+                    <p class="inf">Sanıyorum ki JSON veriler ile çalışmaya programlama dili, ortam yoktur. Sonuç
+                        itibariyle bir
+                        takım
+                        verileri düzenli, standart ve insan gözüyle okunabilir bir formatta tutmanın en iyi yollarından
+                        birisi JSON. Öncesinden gelen XML formatına göre daha az yer tutması da cazibesini
+                        artırmaktadır.
+                        Tabii günümüzde BSON gibi sıkıştırılabilir ve çok daha hızlı yol alabilen seçenekler de mevcut
+                        ama
+                        rust dilini öğrenirken bunun pratiğini yapmadan olmaz. Bu noktada işimizi epey kolaylaştıran bir
+                        kütüphane olduğunu ifade edebilirim. Serde isimli çatı(ki framework olarak işaret ediliyor) JSON
+                        ile
+                        çalışma konusunda epey popüler.
+                        <a class="more" href=""> [Daha fazla]</a>
+                    </p>
+                </div>
+
+
+            </section>
+
+            <footer class="footer2">
+                <div class="nextpages">
+                    <button class="btn">DAHA SONRAKI YAZILAR</button>
+                    <button class="btn">1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button>4</button>
+                    <button>5</button>
+                    <button>6</button>
+                    <button>7</button>
+                    <button>8</button>
+                    <button>9</button>
+                    <button>10</button>
+                    <button class="btn">...</button>
+                    <button>45</button>
+                    <button>46</button>
+                    <button class="btn">DAHA ÖNCEKI YAZILAR</button>
+
+            </footer>
+
+        </div>
+    </div>
+</body>
+
+</html>
